@@ -1,2 +1,5 @@
-# wdd131
-MY Projects
+This repository includes all coursework and practice projects created for the course WDD 131 - Dynamic Web Fundamentals. The repository's purpose is to keep all assignments, exercises, and projects created in the course for reference as we learn basic web development concepts. During the course, students will use different web technologies: **HTML, CSS, JavaScript to build usable web pages that look good on the browser.
+
+The main page of the repository is the course landing page. This page serves as the main entry point for the repository and provides navigation to various resources associated with the course. The structure of the page follows the standard way of organizing web pages by using semantic tags through **header, nav, main, sections, and footer. Styling is defined using CSS, including the ways to use layout tools such as Flexbox for navigation and CSS Grid for page layout. The page also includes some basic JavaScript functions that dynamically populate the current year and last modified date.
+
+The project files are organized in folders for style, script, and images. The organization of files into folders provides clear organization and makes managing the project simpler. This repository represents your progress in learning and doing through project-based work.
