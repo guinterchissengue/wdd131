@@ -1,16 +1,16 @@
-/* Large screens overrides */
+
 @media (min-width: 768px) {
     .nav-menu {
-        display: flex; /* Horizontal menu on large screens */
+        display: flex; 
         flex-direction: row;
         gap: 1rem;
     }
 
     .hamburger {
-        display: none; /* Hide hamburger on large screens */
+        display: none; 
     }
 
     .album-grid {
-        grid-template-columns: repeat(3, 1fr); /* 3 columns */
+        grid-template-columns: repeat(3, 1fr); 
     }
 }
