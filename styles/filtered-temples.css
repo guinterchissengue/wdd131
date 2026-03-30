@@ -1,0 +1,148 @@
+/* ================== RESET & FONTS ================== */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #222;
+    line-height: 1.6;
+}
+
+/* ================= HEADER ================== */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #336699;
+    color: #fff;
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    margin: 0;
+}
+
+/* ================== NAVIGATION ================== */
+nav {
+    display: flex; /* FLEX para desktop */
+}
+
+.nav-menu {
+    display: flex;
+    flex-direction: column; /* default para mobile */
+    gap: 0.5rem;
+}
+
+.nav-menu.hidden {
+    display: none;
+}
+
+.nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-menu a:hover {
+    background-color: #224466;
+    transform: scale(1.05);
+}
+
+/* HAMBURGER BUTTON */
+.hamburger {
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+/* ================== MAIN CONTENT ================== */
+main {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+/* ================== TEMPLE GRID ================== */
+.album-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* ================== TEMPLE CARDS ================== */
+figure {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.12);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+figure:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.18);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 0.7rem;
+    transition: transform 0.3s;
+}
+
+figure img:hover {
+    transform: scale(1.03);
+}
+
+figure h3 {
+    margin: 0.5rem 0;
+    font-size: 1.25rem;
+    color: #336699;
+}
+
+figure p {
+    margin: 0.2rem 0;
+    font-size: 0.95rem;
+    color: #555;
+}
+
+/* ================== MEDIA QUERIES ================== */
+
+/* MENU HORIZONTAL em telas maiores */
+@media (min-width: 768px) {
+    .nav-menu {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none; /* esconde botão hambúrguer no desktop */
+    }
+
+    .album-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .album-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* ================== FOOTER ================== */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #336699;
+    color: #fff;
+    font-size: 0.9rem;
+}
