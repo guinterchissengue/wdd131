@@ -20,7 +20,7 @@ const temples = [
     {name: "Columbus Ohio Temple", location: "Ohio, USA", dedicated: "1999", area: 11000, image: "images/columbus-ohio-temple.jpg"},
     {name: "Fortaleza Brazil Temple", location: "Brazil", dedicated: "2019", area: 36000, image: "images/fortaleza-brazil-temple.jpg"},
     {name: "Nauvoo Temple", location: "Illinois, USA", dedicated: "2002", area: 54000, image: "images/nauvoo-temple.jpg"},
-    {name: "Manti Temple", location: "Utah, USA", dedicated: "1888", area: 74792, image: "images/manti-utah-temple.jpg"},
+    {name: "Manti Temple", location: "Utah, USA", dedicated: "1888", area: 74792, image: "images/manti-temple.jpg"},
     {name: "Madrid Spain Temple", location: "Madrid, Spain", dedicated: "2022", area: 28000, image: "images/madrid-spain-temple.jpg"}
 ];
 
