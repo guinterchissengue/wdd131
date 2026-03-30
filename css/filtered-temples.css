@@ -24,9 +24,15 @@ header h1 {
     margin: 0;
 }
 
+/* ================== NAVIGATION ================== */
+nav {
+    display: flex; /* FLEX para desktop */
+}
+
 .nav-menu {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* default para mobile */
+    gap: 0.5rem;
 }
 
 .nav-menu.hidden {
@@ -36,7 +42,7 @@ header h1 {
 .nav-menu a {
     color: #fff;
     text-decoration: none;
-    padding: 0.5rem 0;
+    padding: 0.5rem 1rem;
     border-radius: 4px;
     transition: background-color 0.3s, transform 0.2s;
 }
@@ -46,6 +52,7 @@ header h1 {
     transform: scale(1.05);
 }
 
+/* HAMBURGER BUTTON */
 .hamburger {
     font-size: 1.5rem;
     background: none;
@@ -61,6 +68,7 @@ main {
     padding: 0 1rem;
 }
 
+/* ================== TEMPLE GRID ================== */
 .album-grid {
     display: grid;
     grid-template-columns: 1fr;
@@ -106,8 +114,19 @@ figure p {
     color: #555;
 }
 
-/* ================== RESPONSIVE GRID ================== */
+/* ================== MEDIA QUERIES ================== */
+
+/* MENU HORIZONTAL em telas maiores */
 @media (min-width: 768px) {
+    .nav-menu {
+        flex-direction: row;
+        gap: 1rem;
+    }
+
+    .hamburger {
+        display: none; /* esconde botão hambúrguer no desktop */
+    }
+
     .album-grid {
         grid-template-columns: repeat(2, 1fr);
     }
