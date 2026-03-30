@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Temple Album | Sacred Temple Gallery</title>
+    <meta name="description" content="Explore sacred temples from around the world. Learn about their dedication date, l
+    ocation, and area.">
+    <meta name="author" content="Guinter Chissengue">
+    <link rel="stylesheet" href="styles/filtered-temples.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display&display=swap" rel="stylesheet">
+    <!-- JavaScript -->
+    <script defer src="scripts/filtered-temples.js"></script>
+</head>
+<body>
+
+<header>
+    <h1>Temple Album</h1>
+    <button class="hamburger" aria-label="Toggle menu">☰</button>
+    <nav class="nav-menu hidden">
+        <a href="#" id="home">Home</a>
+        <a href="#" id="old">Old</a>
+        <a href="#" id="new">New</a>
+        <a href="#" id="large">Large</a>
+        <a href="#" id="small">Small</a>
+    </nav>
+</header>
+
+<main>
+    <h2>Our Temples</h2>
+    <section class="album-grid" id="temple-container">
+    </section>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> Guinter Chissengue | Last Modified: <span id="lastModified"></span></p>
+</footer>
+
+</body>
+</html>
