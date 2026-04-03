@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Product review form for smart home products.">
-    <meta name="author" content="Seu Nome">
-    <link rel="stylesheet" href="styles.css">
+    <meta name="description" content="Submit a detailed review for smart home products.">
+    <meta name="author" content="Guinter Chissengue">
+    <link rel="stylesheet" href="styles/styles.css">
     <title>Product Review Form</title>
 </head>
 <body>
@@ -17,23 +17,32 @@
 <form method="get" action="review.html" id="reviewForm">
 
     <!-- Product Name -->
-    <label for="product">Product Name <span style="color:red">*</span></label>
+    <label for="product">Product Name <span class="required">*</span></label>
     <select id="product" name="product" required>
-        <option disabled selected>Select a Product ...</option>
+        <option value="" disabled selected>Select a Product ...</option>
     </select>
 
     <!-- Overall Rating -->
-    <label>Overall Rating <span style="color:red">*</span></label>
+    <label>Overall Rating <span class="required">*</span></label>
     <div class="rating">
-        <input type="radio" id="star5" name="rating" value="5" required><label for="star5">&#9733;</label>
-        <input type="radio" id="star4" name="rating" value="4"><label for="star4">&#9733;</label>
-        <input type="radio" id="star3" name="rating" value="3"><label for="star3">&#9733;</label>
-        <input type="radio" id="star2" name="rating" value="2"><label for="star2">&#9733;</label>
-        <input type="radio" id="star1" name="rating" value="1"><label for="star1">&#9733;</label>
+        <input type="radio" id="star5" name="rating" value="5" required>
+        <label for="star5">&#9733;</label>
+
+        <input type="radio" id="star4" name="rating" value="4" required>
+        <label for="star4">&#9733;</label>
+
+        <input type="radio" id="star3" name="rating" value="3" required>
+        <label for="star3">&#9733;</label>
+
+        <input type="radio" id="star2" name="rating" value="2" required>
+        <label for="star2">&#9733;</label>
+
+        <input type="radio" id="star1" name="rating" value="1" required>
+        <label for="star1">&#9733;</label>
     </div>
 
     <!-- Date of Installation -->
-    <label for="date">Date of Installation <span style="color:red">*</span></label>
+    <label for="date">Date of Installation <span class="required">*</span></label>
     <input type="date" id="date" name="date" required>
 
     <!-- Useful Features -->
@@ -57,7 +66,7 @@
     <textarea id="review" name="review"></textarea>
 
     <!-- User Name -->
-    <label for="username">Guinter Chissengue</label>
+    <label for="username">Your Name</label>
     <input type="text" id="username" name="username">
 
     <input type="submit" value="Submit Review">
@@ -67,6 +76,6 @@
     <p>&copy; © 2026 Product Reviews</p>
 </footer>
 
-<script src="script.js"></script>
+<script src="scripts/script.js" defer></script>
 </body>
 </html>

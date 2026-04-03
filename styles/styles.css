@@ -7,6 +7,10 @@ body {
     padding: 0;
 }
 
+.required {
+    color: red;
+}
+
 header {
     background-color: #006d77;
     color: white;
@@ -18,12 +22,12 @@ h1, h2 {
     font-family: Georgia, serif;
 }
 
-/* Form styles */
 form {
     background-color: white;
     padding: 20px;
-    margin: 20px;
+    margin: 20px auto;
     border-radius: 5px;
+    max-width: 600px;
 }
 
 label {
@@ -98,7 +102,7 @@ footer {
     margin-top: 20px;
 }
 
-/* Responsive */
+/* Responsive media query */
 @media (max-width: 600px) {
     form {
         margin: 10px;
