@@ -7,6 +7,7 @@ const products = [
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    // populate dropdown only on form page
     const productSelect = document.getElementById("product");
 
     if (productSelect) {
@@ -18,6 +19,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
+    // localStorage counter only on review page
     const reviewCountElement = document.getElementById("reviewCount");
 
     if (reviewCountElement) {

@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Product review form for smart home devices.">
-    <meta name="author" content="Guinter Chissengue">
+    <meta name="description" content="Create and submit detailed reviews 
+    for smart home products including ratings, installation date, 
+    features, and written feedback in a responsive form.">
+    <meta name="author" content=" Guinter Chissengue">
 
     <title>Product Review Form</title>
 
@@ -31,43 +33,46 @@
 
     <!-- Rating -->
     <fieldset>
-        <legend>Overall Rating <span class="required">*</span></legend>
+        <legend>Overall Rating *</legend>
 
-        <input type="radio" id="rate1" name="rating" value="1" required>
-        <label for="rate1">1</label>
+        <label>
+            <input type="radio" id="r1" name="rating" value="1" required>
+            1
+        </label>
 
-        <input type="radio" id="rate2" name="rating" value="2" required>
-        <label for="rate2">2</label>
+        <label>
+            <input type="radio" id="r2" name="rating" value="2">
+            2
+        </label>
 
-        <input type="radio" id="rate3" name="rating" value="3" required>
-        <label for="rate3">3</label>
+        <label>
+            <input type="radio" id="r3" name="rating" value="3">
+            3
+        </label>
 
-        <input type="radio" id="rate4" name="rating" value="4" required>
-        <label for="rate4">4</label>
+        <label>
+            <input type="radio" id="r4" name="rating" value="4">
+            4
+        </label>
 
-        <input type="radio" id="rate5" name="rating" value="5" required>
-        <label for="rate5">5</label>
+        <label>
+            <input type="radio" id="r5" name="rating" value="5">
+            5
+        </label>
     </fieldset>
 
     <!-- Date -->
-    <label for="date">Date of Installation <span class="required">*</span></label>
+    <label for="date">Date of Installation *</label>
     <input type="date" id="date" name="date" required>
 
     <!-- Features -->
     <fieldset>
         <legend>Useful Features</legend>
 
-        <input type="checkbox" id="f1" name="features" value="Easy Setup">
-        <label for="f1">Easy Setup</label>
-
-        <input type="checkbox" id="f2" name="features" value="Remote Control">
-        <label for="f2">Remote Control</label>
-
-        <input type="checkbox" id="f3" name="features" value="Energy Efficient">
-        <label for="f3">Energy Efficient</label>
-
-        <input type="checkbox" id="f4" name="features" value="Smart Integration">
-        <label for="f4">Smart Integration</label>
+        <label><input type="checkbox" name="features" value="Easy Setup"> Easy Setup</label>
+        <label><input type="checkbox" name="features" value="Remote Control"> Remote Control</label>
+        <label><input type="checkbox" name="features" value="Energy Efficient"> Energy Efficient</label>
+        <label><input type="checkbox" name="features" value="Smart Integration"> Smart Integration</label>
     </fieldset>
 
     <!-- Review -->
