@@ -4,32 +4,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Submit reviews for smart home products with rating, date, features, and comments.">
-    <!-- Meta author -->
     <meta name="author" content="Guinter Chissengue">
-    <!-- External CSS file -->
     <link rel="stylesheet" href="styles/styles.css">
     <title>Product Review Form</title>
-    <!-- External JS -->
     <script src="scripts/script.js" defer></script>
 </head>
 <body>
 
 <header>
-    <!-- Main page heading -->
     <h1>Product Review Form</h1>
 </header>
 
-<!-- Review form -->
+<!-- Product review form -->
 <form method="get" action="review.html" id="reviewForm">
 
-    <!-- Product Name select -->
+    <!-- Product Name -->
     <label for="product">Product Name <span class="required">*</span></label>
     <select id="product" name="product" required>
-        <!-- Placeholder option -->
         <option value="" disabled selected>Select a Product ...</option>
     </select>
 
-    <!-- Overall Rating using radio buttons -->
+    <!-- Rating (stars) -->
     <label>Overall Rating <span class="required">*</span></label>
     <div class="rating">
         <input type="radio" id="star5" name="rating" value="5" required>
@@ -48,11 +43,11 @@
         <label for="star1">&#9733;</label>
     </div>
 
-    <!-- Date of Installation input -->
+    <!-- Date of Installation -->
     <label for="date">Date of Installation <span class="required">*</span></label>
     <input type="date" id="date" name="date" required>
 
-    <!-- Useful Features checkboxes -->
+    <!-- Useful Features -->
     <label>Useful Features</label>
     <div class="checkbox-group">
         <input type="checkbox" id="feature1" name="features" value="Easy Setup">
@@ -68,21 +63,20 @@
         <label for="feature4">Smart Integration</label>
     </div>
 
-    <!-- Written Review textarea -->
+    <!-- Written Review -->
     <label for="review">Written Review</label>
     <textarea id="review" name="review"></textarea>
 
-    <!-- User Name input (optional) -->
+    <!-- User Name (optional) -->
     <label for="username">Your Name</label>
     <input type="text" id="username" name="username">
 
-    <!-- Submit button -->
+    <!-- Submit Button -->
     <input type="submit" value="Submit Review">
 </form>
 
 <footer>
-    <!-- Footer content -->
-    <p>&copy; © 2026 Product Reviews</p>
+    <p>&copy; BYU - Pathway 2026 Product Reviews</p>
 </footer>
 
 </body>
