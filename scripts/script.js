@@ -1,4 +1,3 @@
-// Array of products to populate the select dropdown dynamically
 const products = [
     { id: "1", name: "Smart Light Bulb" },
     { id: "2", name: "Smart Thermostat" },
@@ -6,29 +5,30 @@ const products = [
     { id: "4", name: "Smart Speaker" }
 ];
 
-// This function runs when the page content is fully loaded
-window.addEventListener('DOMContentLoaded', () => {
-    
+document.addEventListener("DOMContentLoaded", () => {
+
+    // fill dropdown if we are on the form page
     const productSelect = document.getElementById("product");
 
     if (productSelect) {
-        // Loop 
         products.forEach(product => {
             const option = document.createElement("option");
             option.value = product.id;
-            option.textContent = product.name; 
+            option.textContent = product.name;
             productSelect.appendChild(option);
         });
     }
 
-    // localStorage
-    let count = localStorage.getItem('reviewCount') || 0;  
-    count = parseInt(count) + 1;  
-    localStorage.setItem('reviewCount', count); 
+    // only runs on review page
+    const reviewCountElement = document.getElementById("reviewCount");
 
-     const reviewCountElement = document.getElementById('reviewCount');
     if (reviewCountElement) {
-        
-        reviewCountElement.textContent = `Number of Reviews: ${count}`;
+
+        let count = localStorage.getItem("reviewCount") || 0;
+        count = Number(count) + 1;
+
+        localStorage.setItem("reviewCount", count);
+
+        reviewCountElement.textContent = "Number of Reviews: " + count;
     }
 });
