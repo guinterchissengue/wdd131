@@ -7,7 +7,6 @@ const products = [
 
 document.addEventListener("DOMContentLoaded", () => {
 
-    // fill dropdown if we are on the form page
     const productSelect = document.getElementById("product");
 
     if (productSelect) {
@@ -19,14 +18,11 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // only runs on review page
     const reviewCountElement = document.getElementById("reviewCount");
 
     if (reviewCountElement) {
-
         let count = localStorage.getItem("reviewCount") || 0;
         count = Number(count) + 1;
-
         localStorage.setItem("reviewCount", count);
 
         reviewCountElement.textContent = "Number of Reviews: " + count;

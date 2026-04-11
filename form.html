@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Product review form for submitting feedback on smart home products.">
+    <meta name="description" content="Product review form for smart home devices.">
     <meta name="author" content="Guinter Chissengue">
 
     <title>Product Review Form</title>
@@ -23,7 +23,7 @@
 
 <form method="get" action="review.html">
 
-    <!-- Product selection -->
+    <!-- Product -->
     <label for="product">Product Name <span class="required">*</span></label>
     <select id="product" name="product" required>
         <option value="" disabled selected>Select a Product ...</option>
@@ -33,11 +33,20 @@
     <fieldset>
         <legend>Overall Rating <span class="required">*</span></legend>
 
-        <label><input type="radio" name="rating" value="1" required> 1</label>
-        <label><input type="radio" name="rating" value="2"> 2</label>
-        <label><input type="radio" name="rating" value="3"> 3</label>
-        <label><input type="radio" name="rating" value="4"> 4</label>
-        <label><input type="radio" name="rating" value="5"> 5</label>
+        <input type="radio" id="rate1" name="rating" value="1" required>
+        <label for="rate1">1</label>
+
+        <input type="radio" id="rate2" name="rating" value="2" required>
+        <label for="rate2">2</label>
+
+        <input type="radio" id="rate3" name="rating" value="3" required>
+        <label for="rate3">3</label>
+
+        <input type="radio" id="rate4" name="rating" value="4" required>
+        <label for="rate4">4</label>
+
+        <input type="radio" id="rate5" name="rating" value="5" required>
+        <label for="rate5">5</label>
     </fieldset>
 
     <!-- Date -->
@@ -48,10 +57,17 @@
     <fieldset>
         <legend>Useful Features</legend>
 
-        <label><input type="checkbox" name="features" value="Easy Setup"> Easy Setup</label>
-        <label><input type="checkbox" name="features" value="Remote Control"> Remote Control</label>
-        <label><input type="checkbox" name="features" value="Energy Efficient"> Energy Efficient</label>
-        <label><input type="checkbox" name="features" value="Smart Integration"> Smart Integration</label>
+        <input type="checkbox" id="f1" name="features" value="Easy Setup">
+        <label for="f1">Easy Setup</label>
+
+        <input type="checkbox" id="f2" name="features" value="Remote Control">
+        <label for="f2">Remote Control</label>
+
+        <input type="checkbox" id="f3" name="features" value="Energy Efficient">
+        <label for="f3">Energy Efficient</label>
+
+        <input type="checkbox" id="f4" name="features" value="Smart Integration">
+        <label for="f4">Smart Integration</label>
     </fieldset>
 
     <!-- Review -->
