@@ -1,4 +1,4 @@
-// Products array for dropdown 
+// Product array
 const products = [
     { id: "1", name: "Smart Light Bulb" },
     { id: "2", name: "Smart Thermostat" },
@@ -6,10 +6,10 @@ const products = [
     { id: "4", name: "Smart Speaker" }
 ];
 
-// When page loads
+// Page load
 document.addEventListener("DOMContentLoaded", function() {
     
-    // Fill product dropdown on FORM page only
+    // Form page 
     const productSelect = document.getElementById("product");
     if (productSelect) {
         products.forEach(product => {
@@ -20,12 +20,12 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
     
-    // Show review count on REVIEW page only
-    const reviewCountElement = document.getElementById("reviewCount");
-    if (reviewCountElement) {
+    // Review page
+    const reviewCountEl = document.getElementById("reviewCount");
+    if (reviewCountEl) {
         let count = localStorage.getItem("reviewCount") || 0;
         count = Number(count) + 1;
         localStorage.setItem("reviewCount", count);
-        reviewCountElement.textContent = "Number of Reviews: " + count;
+        reviewCountEl.textContent = "Number of Reviews: " + count;
     }
 });
