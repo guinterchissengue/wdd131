@@ -4,109 +4,82 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Create detailed reviews for smart home products with ratings, 
-    installation date, features and feedback. Responsive form.">
+    installation date, features and feedback. Responsive form.
+">
     <meta name="author" content="Guinter Chissengue">
-    <title>Smart Home Product Review Form</title>
+    <title>Product Review Form</title>
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>🏠 Smart Home Product Reviews</h1>
+        <h1>Product Review Form</h1>
     </header>
 
-    <main class="container">
-        <form id="reviewForm" novalidate>
+    <main>
+        <!-- Form  -->
+        <form method="get" action="review.html">
             
-            <!-- Product -->
-            <div class="form-group">
-                <label for="product">Product Name <span class="required" aria-hidden="true">*</span></label>
-                <select id="product" name="product" required aria-describedby="product-help">
-                    <option value="" disabled selected>Choose a product...</option>
-                </select>
-                <small id="product-help" class="help-text">Select your smart home device</small>
-            </div>
+            <!-- Product select -->
+            <label for="product">Product Name <span class="required">*</span></label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
 
-            <!-- Rating -->
-            <div class="form-group">
-                <fieldset>
-                    <legend>Overall Rating <span class="required" aria-hidden="true">*</span></legend>
-                    <div class="rating-group" role="radiogroup" aria-labelledby="rating-legend">
-                        <label class="radio-label">
-                            <input type="radio" id="r1" name="rating" value="1" required>
-                            <span class="radio-visual">1 ★</span>
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" id="r2" name="rating" value="2">
-                            <span class="radio-visual">2 ★★</span>
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" id="r3" name="rating" value="3">
-                            <span class="radio-visual">3 ★★★</span>
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" id="r4" name="rating" value="4">
-                            <span class="radio-visual">4 ★★★★</span>
-                        </label>
-                        <label class="radio-label">
-                            <input type="radio" id="r5" name="rating" value="5">
-                            <span class="radio-visual">5 ★★★★★</span>
-                        </label>
-                    </div>
-                </fieldset>
-            </div>
+            <!-- Rating  -->
+            <fieldset>
+                <legend>Overall Rating *</legend>
+                <label>
+                    <input type="radio" id="r1" name="rating" value="1" required>
+                    1
+                </label>
+                <label>
+                    <input type="radio" id="r2" name="rating" value="2" required>
+                    2
+                </label>
+                <label>
+                    <input type="radio" id="r3" name="rating" value="3" required>
+                    3
+                </label>
+                <label>
+                    <input type="radio" id="r4" name="rating" value="4" required>
+                    4
+                </label>
+                <label>
+                    <input type="radio" id="r5" name="rating" value="5" required>
+                    5
+                </label>
+            </fieldset>
 
             <!-- Date -->
-            <div class="form-group">
-                <label for="date">Date of Installation <span class="required" aria-hidden="true">*</span></label>
-                <input type="date" id="date" name="date" required>
-                <small class="help-text">When you first set up the device</small>
-            </div>
+            <label for="date">Date of Installation *</label>
+            <input type="date" id="date" name="date" required>
 
             <!-- Features -->
-            <div class="form-group">
-                <fieldset>
-                    <legend>Useful Features</legend>
-                    <div class="checkbox-group">
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="Easy Setup">
-                            Easy Setup
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="Remote Control">
-                            Remote Control
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="Energy Efficient">
-                            Energy Efficient
-                        </label>
-                        <label class="checkbox-label">
-                            <input type="checkbox" name="features" value="Smart Integration">
-                            Smart Integration
-                        </label>
-                    </div>
-                </fieldset>
-            </div>
+            <fieldset>
+                <legend>Useful Features</legend>
+                <label><input type="checkbox" name="features" value="Easy Setup"> Easy Setup</label>
+                <label><input type="checkbox" name="features" value="Remote Control"> Remote Control</label>
+                <label><input type="checkbox" name="features" value="Energy Efficient"> Energy Efficient</label>
+                <label><input type="checkbox" name="features" value="Smart Integration"> Smart Integration</label>
+            </fieldset>
 
             <!-- Review -->
-            <div class="form-group">
-                <label for="review">Your Review</label>
-                <textarea id="review" name="review" rows="4" maxlength="500" 
-                    placeholder="Tell us about your experience..."></textarea>
-            </div>
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review"></textarea>
 
             <!-- Name -->
-            <div class="form-group">
-                <label for="username">Your Name (optional)</label>
-                <input type="text" id="username" name="username" maxlength="50">
-            </div>
+            <label for="username">Your Name</label>
+            <input type="text" id="username" name="username">
 
-            <button type="submit" class="submit-btn">Submit Review</button>
+            <!-- Submit -->
+            <input type="submit" value="Submit Review">
+
         </form>
     </main>
 
     <footer>
-        <p>&copy; 2026 BYU-Pathway Product Reviews</p>
+        <p>&copy; BYU - Pathway 2026 Product Reviews</p>
     </footer>
 </body>
 </html>
