@@ -1,3 +1,5 @@
+// MENU
+
 const hamburger = document.querySelector(".hamburger");
 const navMenu = document.querySelector(".nav-menu");
 
@@ -14,104 +16,110 @@ hamburger.addEventListener("click", () => {
     );
 });
 
+// FOOTER
+
 document.getElementById("year").textContent =
 new Date().getFullYear();
 
 document.getElementById("lastModified").textContent =
 document.lastModified;
 
+// TEMPLE ARRAY
+
 const temples = [
 
 {
-name:"Salt Lake Temple",
-location:"Utah, USA",
-dedicated:"1893",
-area:253000,
-image:"images/salt-lake-temple.jpg"
+name: "Salt Lake Temple",
+location: "Utah, USA",
+dedicated: "1893",
+area: 253000,
+image: "images/salt-lake-temple.jpg"
 },
 
 {
-name:"Laie Hawaii Temple",
-location:"Hawaii, USA",
-dedicated:"1919",
-area:42100,
-image:"images/laie-hawaii-temple.jpg"
+name: "Laie Hawaii Temple",
+location: "Hawaii, USA",
+dedicated: "1919",
+area: 42100,
+image: "images/laie-hawaii-temple.jpg"
 },
 
 {
-name:"Accra Ghana Temple",
-location:"Ghana",
-dedicated:"2004",
-area:17500,
-image:"images/accra-ghana-temple.jpg"
+name: "Accra Ghana Temple",
+location: "Ghana",
+dedicated: "2004",
+area: 17500,
+image: "images/accra-ghana-temple.jpg"
 },
 
 {
-name:"Rome Italy Temple",
-location:"Italy",
-dedicated:"2019",
-area:41000,
-image:"images/rome-italy-temple.jpg"
+name: "Rome Italy Temple",
+location: "Italy",
+dedicated: "2019",
+area: 41000,
+image: "images/rome-italy-temple.jpg"
 },
 
 {
-name:"Paris France Temple",
-location:"France",
-dedicated:"2017",
-area:44000,
-image:"images/paris-france-temple.jpg"
+name: "Paris France Temple",
+location: "France",
+dedicated: "2017",
+area: 44000,
+image: "images/paris-france-temple.jpg"
 },
 
 {
-name:"Columbus Ohio Temple",
-location:"Ohio, USA",
-dedicated:"1999",
-area:11000,
-image:"images/columbus-ohio-temple.jpg"
+name: "Columbus Ohio Temple",
+location: "Ohio, USA",
+dedicated: "1999",
+area: 11000,
+image: "images/columbus-ohio-temple.jpg"
 },
 
 {
-name:"Fortaleza Brazil Temple",
-location:"Brazil",
-dedicated:"2019",
-area:36000,
-image:"images/fortaleza-brazil-temple.jpg"
+name: "Fortaleza Brazil Temple",
+location: "Brazil",
+dedicated: "2019",
+area: 36000,
+image: "images/fortaleza-brazil-temple.jpg"
 },
 
 {
-name:"Nauvoo Temple",
-location:"Illinois, USA",
-dedicated:"2002",
-area:54000,
-image:"images/nauvoo-temple.jpg"
+name: "Nauvoo Temple",
+location: "Illinois, USA",
+dedicated: "2002",
+area: 54000,
+image: "images/nauvoo-temple.jpg"
 },
 
 {
-name:"Manti Temple",
-location:"Utah, USA",
-dedicated:"1888",
-area:74792,
-image:"images/manti-temple.jpg"
+name: "Manti Temple",
+location: "Utah, USA",
+dedicated: "1888",
+area: 74792,
+image: "images/manti-temple.jpg"
 },
 
 {
-name:"Madrid Spain Temple",
-location:"Spain",
-dedicated:"2022",
-area:28000,
-image:"images/madrid-spain-temple.jpg"
+name: "Freiberg Germany Temple",
+location: "Germany",
+dedicated: "1985",
+area: 9500,
+image: "images/freiberg-germany-temple.jpg"
 }
 
 ];
 
+// DISPLAY
+
 const container =
 document.getElementById("temple-container");
 
-function displayTemples(filteredTemples){
+function displayTemples(templesList) {
 
     container.innerHTML = "";
 
-    filteredTemples.forEach(temple => {
+    templesList.forEach((temple) => {
 
         const card = document.createElement("figure");
 
@@ -123,9 +131,21 @@ function displayTemples(filteredTemples){
 
             <figcaption>
                 <h3>${temple.name}</h3>
-                <p><strong>Location:</strong> ${temple.location}</p>
-                <p><strong>Dedicated:</strong> ${temple.dedicated}</p>
-                <p><strong>Area:</strong> ${temple.area.toLocaleString()} sq ft</p>
+
+                <p>
+                    <strong>Location:</strong>
+                    ${temple.location}
+                </p>
+
+                <p>
+                    <strong>Dedicated:</strong>
+                    ${temple.dedicated}
+                </p>
+
+                <p>
+                    <strong>Area:</strong>
+                    ${temple.area.toLocaleString()} sq ft
+                </p>
             </figcaption>
         `;
 
@@ -133,14 +153,16 @@ function displayTemples(filteredTemples){
     });
 }
 
+// FILTERS
+
 document.getElementById("home")
-.addEventListener("click",(e)=>{
+.addEventListener("click", (e) => {
     e.preventDefault();
     displayTemples(temples);
 });
 
 document.getElementById("old")
-.addEventListener("click",(e)=>{
+.addEventListener("click", (e) => {
     e.preventDefault();
 
     displayTemples(
@@ -151,7 +173,7 @@ document.getElementById("old")
 });
 
 document.getElementById("new")
-.addEventListener("click",(e)=>{
+.addEventListener("click", (e) => {
     e.preventDefault();
 
     displayTemples(
@@ -162,7 +184,7 @@ document.getElementById("new")
 });
 
 document.getElementById("large")
-.addEventListener("click",(e)=>{
+.addEventListener("click", (e) => {
     e.preventDefault();
 
     displayTemples(
@@ -173,7 +195,7 @@ document.getElementById("large")
 });
 
 document.getElementById("small")
-.addEventListener("click",(e)=>{
+.addEventListener("click", (e) => {
     e.preventDefault();
 
     displayTemples(
@@ -182,5 +204,7 @@ document.getElementById("small")
         )
     );
 });
+
+// INITIAL LOAD
 
 displayTemples(temples);
