@@ -1,0 +1,92 @@
+/* General Styles */
+
+body {
+font-family: Arial, sans-serif;
+background-color: #f4f4f4;
+color: #333;
+margin: 0;
+line-height: 1.6;
+}
+
+/* Header */
+
+header {
+background-color: #006d77;
+color: white;
+text-align: center;
+padding: 2rem;
+}
+
+/* Logo */
+
+.logo {
+max-width: 120px;
+margin-bottom: 1rem;
+}
+
+/* Headings */
+
+h1,
+h2,
+h3 {
+font-family: 'Poppins', sans-serif;
+}
+
+h2 {
+color: #006d77;
+}
+
+/* Sections */
+
+section {
+background-color: white;
+margin: 1rem;
+padding: 1.5rem;
+border-radius: 8px;
+}
+
+/* Color Samples */
+
+.color-box {
+padding: 1rem;
+margin: 0.5rem 0;
+border-radius: 5px;
+}
+
+.primary {
+background-color: #006d77;
+color: white;
+}
+
+.accent {
+background-color: #e29578;
+color: white;
+}
+
+.neutral {
+background-color: #f4f4f4;
+border: 1px solid #ccc;
+}
+
+/* Wireframes */
+
+.wireframe {
+border: 2px dashed #999;
+background-color: #fafafa;
+padding: 1rem;
+overflow-x: auto;
+}
+
+.wireframe pre {
+margin: 0;
+font-family: monospace;
+}
+
+/* Footer */
+
+footer {
+background-color: #006d77;
+color: white;
+text-align: center;
+padding: 1rem;
+}
