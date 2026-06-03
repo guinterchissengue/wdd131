@@ -4,78 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta name="description" content="Smart home product review form">
+    <!-- Meta Description for SEO (50-150 characters) -->
+    <meta name="description" content="Smart home product review form to rate devices, share feedback, select features, and track submitted reviews online.">
     <meta name="author" content="Guinter Chissengue">
 
-    <title>Product Review Form</title>
+    <title>Smart Home Product Review Form</title>
 
-    <!-- External CSS file -->
+    <!-- External CSS -->
     <link rel="stylesheet" href="styles/styles.css">
 
-    <!-- External JavaScript file -->
+    <!-- External JS -->
     <script src="scripts/script.js" defer></script>
 </head>
-
 <body>
+    <header>
+        <h1>Smart Home Product Review Form</h1>
+    </header>
 
-<header>
-    <h1>Product Review Form</h1>
-</header>
+    <main>
+        <form method="get" action="review.html">
+            
+            <!-- Product Name -->
+            <label for="product">Product Name <span class="required">*</span></label>
+            <select id="product" name="product" required>
+                <option value="" disabled selected>Select a Product ...</option>
+            </select>
 
-<main>
+            <!-- Overall Rating -->
+            <fieldset>
+                <legend>Overall Rating <span class="required">*</span></legend>
 
-    <!-- Start of form -->
-    <form method="get" action="review.html">
+                <input type="radio" id="r1" name="rating" value="1" required>
+                <label for="r1">1 Star</label>
 
-        <!-- Product selection -->
-        <label for="product">Product Name <span class="required">*</span></label>
-        <select id="product" name="product" required>
-            <option value="" disabled selected>Select a Product ...</option>
-        </select>
+                <input type="radio" id="r2" name="rating" value="2" required>
+                <label for="r2">2 Stars</label>
 
-        <!-- Rating section -->
-        <fieldset>
-            <legend>Overall Rating <span class="required">*</span></legend>
+                <input type="radio" id="r3" name="rating" value="3" required>
+                <label for="r3">3 Stars</label>
 
-            <label><input type="radio" name="rating" value="1" required> ☆</label>
-            <label><input type="radio" name="rating" value="2"> ☆☆</label>
-            <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
-            <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
-            <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
-        </fieldset>
+                <input type="radio" id="r4" name="rating" value="4" required>
+                <label for="r4">4 Stars</label>
 
-        <!-- Installation date -->
-        <label for="date">Date of Installation <span class="required">*</span></label>
-        <input type="date" id="date" name="date" required>
+                <input type="radio" id="r5" name="rating" value="5" required>
+                <label for="r5">5 Stars</label>
+            </fieldset>
 
-        <!-- Useful features -->
-        <fieldset>
-            <legend>Useful Features</legend>
+            <!-- Date of Installation -->
+            <label for="date">Date of Installation <span class="required">*</span></label>
+            <input type="date" id="date" name="date" required>
 
-            <label><input type="checkbox" name="features" value="Easy Setup"> Easy Setup</label>
-            <label><input type="checkbox" name="features" value="Remote Control"> Remote Control</label>
-            <label><input type="checkbox" name="features" value="Energy Efficient"> Energy Efficient</label>
-            <label><input type="checkbox" name="features" value="Smart Integration"> Smart Integration</label>
-        </fieldset>
+            <!-- Useful Features -->
+            <fieldset>
+                <legend>Useful Features</legend>
 
-        <!-- Written review -->
-        <label for="review">Written Review</label>
-        <textarea id="review" name="review"></textarea>
+                <input type="checkbox" id="f1" name="features" value="Easy Setup">
+                <label for="f1">Easy Setup</label>
 
-        <!-- User name -->
-        <label for="username">Your Name</label>
-        <input type="text" id="username" name="username">
+                <input type="checkbox" id="f2" name="features" value="Remote Control">
+                <label for="f2">Remote Control</label>
 
-        <!-- Submit button -->
-        <input type="submit" value="Submit Review">
+                <input type="checkbox" id="f3" name="features" value="Energy Efficient">
+                <label for="f3">Energy Efficient</label>
 
-    </form>
+                <input type="checkbox" id="f4" name="features" value="Smart Integration">
+                <label for="f4">Smart Integration</label>
+            </fieldset>
 
-</main>
+            <!-- Written Review -->
+            <label for="review">Written Review</label>
+            <textarea id="review" name="review"></textarea>
 
-<footer>
-    <p>&copy; 2026 Product Reviews</p>
-</footer>
+            <!-- User Name -->
+            <label for="username">Your Name</label>
+            <input type="text" id="username" name="username">
 
+            <!-- Submit Button -->
+            <input type="submit" value="Submit Review">
+
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; BYU - Pathway 2026 Product Reviews</p>
+    </footer>
 </body>
 </html>
