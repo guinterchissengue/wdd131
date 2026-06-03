@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Review Submitted</title>
+</head>
+
+<body>
+
+<h1>Thank you for your review!</h1>
+
+<p>Total reviews submitted: <span id="count">0</span></p>
+
+<a href="form.html">Submit another review</a>
+
+<script>
+// Get previous count from localStorage
+var count = localStorage.getItem("reviews");
+
+// Update counter
+count = count ? Number(count) + 1 : 1;
+
+// Save new value
+localStorage.setItem("reviews", count);
+
+// Display on page
+document.getElementById("count").textContent = count;
+</script>
+
+</body>
+</html>

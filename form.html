@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Smart home product review form">
+    <meta name="author" content="Guinter Chissengue">
+
+    <title>Product Review Form</title>
+
+    <!-- External CSS file -->
+    <link rel="stylesheet" href="styles/styles.css">
+
+    <!-- External JavaScript file -->
+    <script src="scripts/script.js" defer></script>
+</head>
+
+<body>
+
+<header>
+    <h1>Product Review Form</h1>
+</header>
+
+<main>
+
+    <!-- Start of form -->
+    <form method="get" action="review.html">
+
+        <!-- Product selection -->
+        <label for="product">Product Name <span class="required">*</span></label>
+        <select id="product" name="product" required>
+            <option value="" disabled selected>Select a Product ...</option>
+        </select>
+
+        <!-- Rating section -->
+        <fieldset>
+            <legend>Overall Rating <span class="required">*</span></legend>
+
+            <label><input type="radio" name="rating" value="1" required> ☆</label>
+            <label><input type="radio" name="rating" value="2"> ☆☆</label>
+            <label><input type="radio" name="rating" value="3"> ☆☆☆</label>
+            <label><input type="radio" name="rating" value="4"> ☆☆☆☆</label>
+            <label><input type="radio" name="rating" value="5"> ☆☆☆☆☆</label>
+        </fieldset>
+
+        <!-- Installation date -->
+        <label for="date">Date of Installation <span class="required">*</span></label>
+        <input type="date" id="date" name="date" required>
+
+        <!-- Useful features -->
+        <fieldset>
+            <legend>Useful Features</legend>
+
+            <label><input type="checkbox" name="features" value="Easy Setup"> Easy Setup</label>
+            <label><input type="checkbox" name="features" value="Remote Control"> Remote Control</label>
+            <label><input type="checkbox" name="features" value="Energy Efficient"> Energy Efficient</label>
+            <label><input type="checkbox" name="features" value="Smart Integration"> Smart Integration</label>
+        </fieldset>
+
+        <!-- Written review -->
+        <label for="review">Written Review</label>
+        <textarea id="review" name="review"></textarea>
+
+        <!-- User name -->
+        <label for="username">Your Name</label>
+        <input type="text" id="username" name="username">
+
+        <!-- Submit button -->
+        <input type="submit" value="Submit Review">
+
+    </form>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Product Reviews</p>
+</footer>
+
+</body>
+</html>
