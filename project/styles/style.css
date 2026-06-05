@@ -1,0 +1,268 @@
+/* I started with a reset so spacing is easier to control on every browser. */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Consistent site colors. */
+:root {
+  --primary: #12355b;
+  --secondary: #0b6e69;
+  --accent: #f4a261;
+  --light: #f7fafc;
+  --white: #ffffff;
+  --text: #1f2933;
+  --muted: #52606d;
+  --border: #d9e2ec;
+  --shadow: 0 8px 24px rgba(18, 53, 91, 0.12);
+}
+
+body {
+  background-color: var(--light);
+  color: var(--text);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--white);
+  font-weight: 700;
+  padding: 0.45rem 0.8rem;
+  text-decoration: none;
+}
+
+nav a:hover,
+nav a:focus {
+  background-color: var(--secondary);
+  border-radius: 6px;
+  outline: none;
+}
+
+main {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 1.5rem;
+}
+
+/* Responsive hero layout. */
+.hero {
+  align-items: center;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  min-height: 70vh;
+  padding: 2rem 0;
+}
+
+.hero-content {
+  max-width: 620px;
+}
+
+.hero h2,
+.page-intro h2,
+.info-section h2 {
+  color: var(--primary);
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero p,
+.page-intro p,
+.info-section p {
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.hero img {
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+/* Button styles. */
+.btn,
+button {
+  background-color: var(--secondary);
+  border: none;
+  border-radius: 6px;
+  color: var(--white);
+  cursor: pointer;
+  display: inline-block;
+  font: inherit;
+  font-weight: 700;
+  padding: 0.8rem 1.1rem;
+  text-decoration: none;
+}
+
+.btn:hover,
+.btn:focus,
+button:hover,
+button:focus {
+  background-color: var(--primary);
+  outline: 3px solid rgba(244, 162, 97, 0.55);
+}
+
+.info-section,
+.page-intro {
+  padding: 1.5rem 0;
+}
+
+/* Content cards. */
+.cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr;
+  margin-top: 1.5rem;
+}
+
+.cards article,
+.question,
+#resultBox {
+  background-color: var(--white);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: 1.25rem;
+}
+
+.cards h3 {
+  color: var(--secondary);
+  margin-bottom: 0.5rem;
+}
+
+/* Centered form. */
+form {
+  display: grid;
+  gap: 1rem;
+  margin: 0 auto;
+  max-width: 760px;
+}
+
+.question {
+  display: grid;
+  gap: 0.7rem;
+}
+
+.question legend {
+  color: var(--primary);
+  font-weight: 700;
+  padding: 0 0.3rem;
+}
+
+.question label {
+  display: block;
+  padding-left: 0.2rem;
+}
+
+.question input {
+  margin-right: 0.4rem;
+}
+
+/* Result box uses the same style as the quiz questions. */
+#resultBox {
+  margin: 1.5rem auto;
+  max-width: 760px;
+  text-align: center;
+}
+
+#resultBox h2 {
+  color: var(--primary);
+  margin-bottom: 0.75rem;
+}
+
+#resultBox h3 {
+  color: var(--secondary);
+  margin: 0.75rem 0;
+}
+
+.result-list {
+  margin: 1rem auto 0;
+  max-width: 520px;
+  text-align: left;
+}
+
+.result-list li {
+  margin-bottom: 0.45rem;
+}
+
+.center-action {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+footer {
+  background-color: var(--primary);
+  color: var(--white);
+  padding: 1rem;
+  text-align: center;
+}
+
+footer a {
+  color: var(--accent);
+  font-weight: 700;
+}
+
+/* Two column layout for larger screens. */
+@media screen and (min-width: 700px) {
+  .hero {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero h2,
+  .page-intro h2,
+  .info-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Small phones layout. */
+@media screen and (max-width: 480px) {
+  header h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 1rem;
+  }
+
+  .hero h2,
+  .page-intro h2,
+  .info-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .btn,
+  button {
+    width: 100%;
+  }
+}
