@@ -5,23 +5,24 @@
   <meta name="author" content="Guinter Chissengue">
   <meta name="description" content="View your PathFinder career quiz result and suggested university study area.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12355b">
   <title>PathFinder | Results</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+ 
   <header>
     <h1>PathFinder</h1>
-
-    <!-- Connecting  to the rest of the site. -->
-    <nav>
+    <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="quiz.html">Quiz</a>
-      <a href="results.html">Results</a>
+      <a href="results.html" aria-current="page">Results</a>
     </nav>
   </header>
-
-  <main>
+ 
+  <main id="main">
     <section class="page-intro">
       <h2>Your Career Results</h2>
       <p>
@@ -29,21 +30,20 @@
         further research about university programs.
       </p>
     </section>
-
-    <!-- JavaScript adds the career results -->
+ 
     <section id="resultBox" aria-live="polite"></section>
-
+ 
     <div class="center-action">
       <a href="quiz.html" class="btn">Retake Quiz</a>
       <button id="clearResult" type="button">Clear Saved Result</button>
     </div>
   </main>
-
+ 
   <footer>
-    <p>&copy; 2026 PathFinder | BYU-Pathway WDD 131 Project| Guinter Chissengue</p>
+    <p>&copy; 2026 PathFinder | BYU-Pathway WDD 131 Project | Guinter Chissengue</p>
     <a href="references.html">References</a>
   </footer>
-
+ 
   <script src="js/script.js"></script>
 </body>
 </html>

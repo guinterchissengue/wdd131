@@ -5,22 +5,24 @@
   <meta name="author" content="Guinter Chissengue">
   <meta name="description" content="PathFinder helps students explore university course options through an interactive career guidance quiz.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#12355b">
   <title>PathFinder | Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+<!-- Skip link to main content for accessibility. -->
+  <a class="skip-link" href="#main">Skip to main content</a>
+ 
   <header>
     <h1>PathFinder</h1>
-
-    <nav>
-      <a href="index.html">Home</a>
+    <nav aria-label="Main navigation">
+      <a href="index.html" aria-current="page">Home</a>
       <a href="quiz.html">Quiz</a>
       <a href="results.html">Results</a>
     </nav>
   </header>
-
-  <main>
+ 
+  <main id="main">
     <section class="hero">
       <div class="hero-content">
         <h2>Discover a University Path That Fits You</h2>
@@ -30,17 +32,14 @@
         </p>
         <a href="quiz.html" class="btn">Start Quiz</a>
       </div>
-
+ 
+      <!-- Lazy-loaded image with reserved space and async decoding for performance. -->
       <img
-        src="images/student.jpg"
-        alt="Student thinking about university and career choices"
-        width="700"
-        height="467"
-        loading="lazy"
+        src="images/student.jpg" alt="Student thinking about university and career choices" width="700" height="467" loading="lazy" decoding="async"
       >
     </section>
-
-    <!-- Quiz info cards. -->
+ 
+    <!-- Information cards explaining how the quiz helps. -->
     <section class="info-section">
       <h2>Why This Quiz Helps</h2>
       <p>
@@ -48,18 +47,15 @@
         This quiz does not replace professional academic counseling, but it can help you
         identify a direction based on your preferences.
       </p>
-
       <div class="cards">
         <article>
           <h3>Explore Interests</h3>
           <p>Answer questions about subjects, activities, and work environments you enjoy.</p>
         </article>
-
         <article>
           <h3>See a Recommendation</h3>
           <p>Get a suggested study area connected to your strongest answer pattern.</p>
         </article>
-
         <article>
           <h3>Reflect Before Choosing</h3>
           <p>Use your result as a starting point for research, prayer, planning, and advice.</p>
@@ -67,9 +63,9 @@
       </div>
     </section>
   </main>
-
+ 
   <footer>
-    <p>&copy; 2026 PathFinder | BYU-Pathway WDD 131 Project|Guinter Chissengue</p>
+    <p>&copy; 2026 PathFinder | BYU-Pathway WDD 131 Project | Guinter Chissengue</p>
     <a href="references.html">References</a>
   </footer>
 </body>
