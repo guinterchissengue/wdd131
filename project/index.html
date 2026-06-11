@@ -2,26 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Guinter Chissengue">
   <meta name="description" content="PathFinder helps students explore university course options through an interactive career guidance quiz.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#12355b">
   <title>PathFinder | Home</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Heading and body fonts for a distinctive, contemporary look. -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-<!-- Skip link to main content for accessibility. -->
+  <!-- Skip link to main content for keyboard and screen-reader users. -->
   <a class="skip-link" href="#main">Skip to main content</a>
- 
+
   <header>
-    <h1>PathFinder</h1>
+    <!-- Logo plus wordmark keeps the branding consistent on every page. -->
+    <div class="brand">
+      <img src="images/logo.png" alt="PathFinder logo" width="44" height="44">
+      <h1>PathFinder</h1>
+    </div>
     <nav aria-label="Main navigation">
       <a href="index.html" aria-current="page">Home</a>
       <a href="quiz.html">Quiz</a>
       <a href="results.html">Results</a>
+      <a href="references.html">References</a>
     </nav>
   </header>
- 
+
   <main id="main">
     <section class="hero">
       <div class="hero-content">
@@ -32,13 +43,11 @@
         </p>
         <a href="quiz.html" class="btn">Start Quiz</a>
       </div>
- 
-      <!-- Lazy-loaded image with reserved space and async decoding for performance. -->
-      <img
-        src="images/student.jpg" alt="Student thinking about university and career choices" width="700" height="467" loading="lazy" decoding="async"
-      >
+
+      <!-- Reserved width/height prevents layout shift; lazy + async help performance. -->
+      <img src="images/student.jpg" alt="Student thinking about university and career choices" width="700" height="467" loading="lazy" decoding="async">
     </section>
- 
+
     <!-- Information cards explaining how the quiz helps. -->
     <section class="info-section">
       <h2>Why This Quiz Helps</h2>
@@ -58,15 +67,17 @@
         </article>
         <article>
           <h3>Reflect Before Choosing</h3>
-          <p>Use your result as a starting point for research, prayer, planning, and advice.</p>
+          <p>Use your result as a starting point for research, planning, and advice.</p>
         </article>
       </div>
     </section>
   </main>
- 
+
   <footer>
     <p>&copy; 2026 PathFinder | BYU-Pathway WDD 131 Project | Guinter Chissengue</p>
     <a href="references.html">References</a>
   </footer>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>

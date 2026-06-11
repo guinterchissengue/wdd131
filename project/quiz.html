@@ -2,28 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Guinter Chissengue">
   <meta name="description" content="Take the PathFinder quiz to discover a university course area that matches your interests and strengths.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#12355b">
   <title>PathFinder | Quiz</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-  <!-- Skip link for keyboard and screen-reader users. -->
+  <!-- Skip link to help keyboard users jump directly to the main content -->
   <a class="skip-link" href="#main">Skip to main content</a>
- 
+
   <header>
-    <h1>PathFinder</h1>
-    <!-- Consistent navigation across pages. -->
+      <!-- Project branding area with logo and site name -->
+    <div class="brand">
+      <img src="images/logo.png" alt="PathFinder logo" width="44" height="44">
+      <h1>PathFinder</h1>
+    </div>
+
+  <!-- Main site navigation -->
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="quiz.html" aria-current="page">Quiz</a>
       <a href="results.html">Results</a>
+      <a href="references.html">References</a>
     </nav>
   </header>
- 
+
   <main id="main">
+     <!--  Introduction explaining the purpose of the quiz -->
     <section class="page-intro">
       <h2>Career Interest Quiz</h2>
       <p>
@@ -31,101 +43,181 @@
         review it again on the results page.
       </p>
     </section>
- 
-    <!-- Fieldset groups each question for accessibility and validation. -->
+
+    <!-- Each question is grouped in a fieldset/legend with explicit labels for accessibility. -->
     <form id="quizForm" novalidate>
       <fieldset class="question">
         <legend>1. What do you enjoy the most?</legend>
-        <label><input type="radio" name="q1" value="tech" required> Technology</label>
-        <label><input type="radio" name="q1" value="business"> Business</label>
-        <label><input type="radio" name="q1" value="health"> Helping people</label>
-        <label><input type="radio" name="q1" value="creative"> Arts and design</label>
+        <label for="q1a">
+          <input type="radio" id="q1a" name="q1" value="tech" required> Technology
+        </label>
+        <label for="q1b">
+          <input type="radio" id="q1b" name="q1" value="business"> Business
+        </label>
+        <label for="q1c">
+          <input type="radio" id="q1c" name="q1" value="health"> Helping people
+        </label>
+        <label for="q1d">
+          <input type="radio" id="q1d" name="q1" value="creative"> Arts and design
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>2. Which school subject do you prefer?</legend>
-        <label><input type="radio" name="q2" value="tech" required> Mathematics</label>
-        <label><input type="radio" name="q2" value="business"> Economics</label>
-        <label><input type="radio" name="q2" value="health"> Biology</label>
-        <label><input type="radio" name="q2" value="creative"> Literature</label>
+        <label for="q2a">
+          <input type="radio" id="q2a" name="q2" value="tech" required> Mathematics
+        </label>
+        <label for="q2b">
+          <input type="radio" id="q2b" name="q2" value="business"> Economics
+        </label>
+        <label for="q2c">
+          <input type="radio" id="q2c" name="q2" value="health"> Biology
+        </label>
+        <label for="q2d">
+          <input type="radio" id="q2d" name="q2" value="creative"> Literature
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>3. What kind of tasks do you enjoy?</legend>
-        <label><input type="radio" name="q3" value="tech" required> Solving logical problems</label>
-        <label><input type="radio" name="q3" value="business"> Leading and organizing people</label>
-        <label><input type="radio" name="q3" value="health"> Caring for others</label>
-        <label><input type="radio" name="q3" value="creative"> Creating visual or written work</label>
+        <label for="q3a">
+          <input type="radio" id="q3a" name="q3" value="tech" required> Solving logical problems
+        </label>
+        <label for="q3b">
+          <input type="radio" id="q3b" name="q3" value="business"> Leading and organizing people
+        </label>
+        <label for="q3c">
+          <input type="radio" id="q3c" name="q3" value="health"> Caring for others
+        </label>
+        <label for="q3d">
+          <input type="radio" id="q3d" name="q3" value="creative"> Creating visual or written work
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>4. Which word describes you best?</legend>
-        <label><input type="radio" name="q4" value="tech" required> Logical</label>
-        <label><input type="radio" name="q4" value="business"> Ambitious</label>
-        <label><input type="radio" name="q4" value="health"> Empathetic</label>
-        <label><input type="radio" name="q4" value="creative"> Imaginative</label>
+        <label for="q4a">
+          <input type="radio" id="q4a" name="q4" value="tech" required> Logical
+        </label>
+        <label for="q4b">
+          <input type="radio" id="q4b" name="q4" value="business"> Ambitious
+        </label>
+        <label for="q4c">
+          <input type="radio" id="q4c" name="q4" value="health"> Empathetic
+        </label>
+        <label for="q4d">
+          <input type="radio" id="q4d" name="q4" value="creative"> Imaginative
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>5. What is your ideal work environment?</legend>
-        <label><input type="radio" name="q5" value="tech" required> Technology company or lab</label>
-        <label><input type="radio" name="q5" value="business"> Office or business setting</label>
-        <label><input type="radio" name="q5" value="health"> Hospital or clinic</label>
-        <label><input type="radio" name="q5" value="creative"> Studio or creative workspace</label>
+        <label for="q5a">
+          <input type="radio" id="q5a" name="q5" value="tech" required> Technology company or lab
+        </label>
+        <label for="q5b">
+          <input type="radio" id="q5b" name="q5" value="business"> Office or business setting
+        </label>
+        <label for="q5c">
+          <input type="radio" id="q5c" name="q5" value="health"> Hospital or clinic
+        </label>
+        <label for="q5d">
+          <input type="radio" id="q5d" name="q5" value="creative"> Studio or creative workspace
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>6. Which activity sounds most interesting?</legend>
-        <label><input type="radio" name="q6" value="tech" required> Building an app or website</label>
-        <label><input type="radio" name="q6" value="business"> Starting a small business</label>
-        <label><input type="radio" name="q6" value="health"> Volunteering at a health center</label>
-        <label><input type="radio" name="q6" value="creative"> Designing a poster or video</label>
+        <label for="q6a">
+          <input type="radio" id="q6a" name="q6" value="tech" required> Building an app or website
+        </label>
+        <label for="q6b">
+          <input type="radio" id="q6b" name="q6" value="business"> Starting a small business
+        </label>
+        <label for="q6c">
+          <input type="radio" id="q6c" name="q6" value="health"> Volunteering at a health center
+        </label>
+        <label for="q6d">
+          <input type="radio" id="q6d" name="q6" value="creative"> Designing a poster or video
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>7. What type of problem would you prefer to solve?</legend>
-        <label><input type="radio" name="q7" value="tech" required> A technical problem</label>
-        <label><input type="radio" name="q7" value="business"> A management problem</label>
-        <label><input type="radio" name="q7" value="health"> A health or care problem</label>
-        <label><input type="radio" name="q7" value="creative"> A communication problem</label>
+        <label for="q7a">
+          <input type="radio" id="q7a" name="q7" value="tech" required> A technical problem
+        </label>
+        <label for="q7b">
+          <input type="radio" id="q7b" name="q7" value="business"> A management problem
+        </label>
+        <label for="q7c">
+          <input type="radio" id="q7c" name="q7" value="health"> A health or care problem
+        </label>
+        <label for="q7d">
+          <input type="radio" id="q7d" name="q7" value="creative"> A communication problem
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>8. Which skill do you want to improve most?</legend>
-        <label><input type="radio" name="q8" value="tech" required> Programming and systems thinking</label>
-        <label><input type="radio" name="q8" value="business"> Leadership and planning</label>
-        <label><input type="radio" name="q8" value="health"> Scientific knowledge and care</label>
-        <label><input type="radio" name="q8" value="creative"> Creativity and communication</label>
+        <label for="q8a">
+          <input type="radio" id="q8a" name="q8" value="tech" required> Programming and systems thinking
+        </label>
+        <label for="q8b">
+          <input type="radio" id="q8b" name="q8" value="business"> Leadership and planning
+        </label>
+        <label for="q8c">
+          <input type="radio" id="q8c" name="q8" value="health"> Scientific knowledge and care
+        </label>
+        <label for="q8d">
+          <input type="radio" id="q8d" name="q8" value="creative"> Creativity and communication
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>9. How do you usually make decisions?</legend>
-        <label><input type="radio" name="q9" value="tech" required> By analyzing facts and logic</label>
-        <label><input type="radio" name="q9" value="business"> By considering goals and opportunities</label>
-        <label><input type="radio" name="q9" value="health"> By thinking about people's needs</label>
-        <label><input type="radio" name="q9" value="creative"> By imagining different possibilities</label>
+        <label for="q9a">
+          <input type="radio" id="q9a" name="q9" value="tech" required> By analyzing facts and logic
+        </label>
+        <label for="q9b">
+          <input type="radio" id="q9b" name="q9" value="business"> By considering goals and opportunities
+        </label>
+        <label for="q9c">
+          <input type="radio" id="q9c" name="q9" value="health"> By thinking about people's needs
+        </label>
+        <label for="q9d">
+          <input type="radio" id="q9d" name="q9" value="creative"> By imagining different possibilities
+        </label>
       </fieldset>
- 
+
       <fieldset class="question">
         <legend>10. Which university project would you enjoy most?</legend>
-        <label><input type="radio" name="q10" value="tech" required> Creating software</label>
-        <label><input type="radio" name="q10" value="business"> Creating a business plan</label>
-        <label><input type="radio" name="q10" value="health"> Researching a health topic</label>
-        <label><input type="radio" name="q10" value="creative"> Creating a design portfolio</label>
+        <label for="q10a">
+          <input type="radio" id="q10a" name="q10" value="tech" required> Creating software
+        </label>
+        <label for="q10b">
+          <input type="radio" id="q10b" name="q10" value="business"> Creating a business plan
+        </label>
+        <label for="q10c">
+          <input type="radio" id="q10c" name="q10" value="health"> Researching a health topic
+        </label>
+        <label for="q10d">
+          <input type="radio" id="q10d" name="q10" value="creative"> Creating a design portfolio
+        </label>
       </fieldset>
- 
-      <!-- Inline validation message for accessibility -->
+
+      <!-- Inline validation message announced to assistive technology. -->
       <p id="formMessage" class="form-message" role="alert"></p>
- 
+
       <button type="submit">See Results</button>
     </form>
   </main>
- 
+
   <footer>
     <p>&copy; 2026 PathFinder | BYU-Pathway WDD 131 Project | Guinter Chissengue</p>
     <a href="references.html">References</a>
   </footer>
- 
-  <script src="js/script.js"></script>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>

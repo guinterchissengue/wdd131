@@ -2,26 +2,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="author" content="Guinter Chissengue">
   <meta name="description" content="View your PathFinder career quiz result and suggested university study area.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="theme-color" content="#12355b">
   <title>PathFinder | Results</title>
-  <link rel="stylesheet" href="css/style.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
-
   <a class="skip-link" href="#main">Skip to main content</a>
- 
+
   <header>
-    <h1>PathFinder</h1>
+    <div class="brand">
+      <img src="images/logo.png" alt="PathFinder logo" width="44" height="44">
+      <h1>PathFinder</h1>
+    </div>
     <nav aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="quiz.html">Quiz</a>
       <a href="results.html" aria-current="page">Results</a>
+      <a href="references.html">References</a>
     </nav>
   </header>
- 
+
   <main id="main">
     <section class="page-intro">
       <h2>Your Career Results</h2>
@@ -30,20 +38,21 @@
         further research about university programs.
       </p>
     </section>
- 
+
+    <!-- JavaScript fills this region with the saved recommendation (aria-live for updates). -->
     <section id="resultBox" aria-live="polite"></section>
- 
+
     <div class="center-action">
       <a href="quiz.html" class="btn">Retake Quiz</a>
       <button id="clearResult" type="button">Clear Saved Result</button>
     </div>
   </main>
- 
+
   <footer>
     <p>&copy; 2026 PathFinder | BYU-Pathway WDD 131 Project | Guinter Chissengue</p>
     <a href="references.html">References</a>
   </footer>
- 
-  <script src="js/script.js"></script>
+
+  <script src="scripts/script.js"></script>
 </body>
 </html>
